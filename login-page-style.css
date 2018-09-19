@@ -1,0 +1,175 @@
+@font-face 
+{ 
+	font-family: Righteous; 
+	src: url('Righteous-Regular.ttf'); 
+} 
+*
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: Righteous;
+}
+body
+{
+	overflow: hidden;
+}
+.main
+{
+	text-align: center;
+	overflow: hidden;
+}
+.img-background
+{
+	position: fixed;
+}
+/*-------------------------------start loginform-------------------------------*/
+.loginform
+{
+	width: 30%;
+	margin-right: 10%;
+	margin-left: 10%;
+    position: relative;
+    top: 27.5%;
+    float: left;
+    border: 1px dotted white;
+    box-shadow: 2px 11px 34px black;
+}
+.img-login
+{
+	background-image: url("background.JPG");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	filter: blur(50px);
+}
+input
+{
+	margin: auto;
+	position: relative;
+	display: block;
+	width: 70%;
+    height: 40px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    border-style: double;
+    font-size: 17px;
+	font-family: cursive;
+	color: #929292;
+	box-shadow: 0 9px 14px -7px black;
+	padding: 0px 15px 0 15px;
+}
+.text
+{
+	display: block;
+	position: relative;
+	color: white;
+	margin-bottom: 25px;
+	padding-top: 10px;
+	text-shadow: 4px 4px 2px black; 
+}
+.button-login
+{
+	width: 76%;
+    height: 40px;
+    margin-bottom: 30px;
+    border-radius: 25px;
+    font-size: 25px;
+    position: relative;
+    background-color: #63354f;
+    color: white;
+    border: 0px;
+    box-shadow: 1px 1px 3px black;
+}
+/*-------------------------------End loginform-------------------------------*/
+.line
+{
+	width: 1px;
+	height: 60%;
+	background-color: white;
+	position: relative;
+	margin: auto;
+	top: 20%;
+	box-shadow: 2px 3px 4px black;
+}
+/*-------------------------------Start welcome-------------------------------*/
+.welcome
+{
+	float: right;
+	position: relative;
+	width: 30%;
+	margin: 0 10% 0 10%;
+	top: -27.5%;
+	text-shadow: 4px 4px 2px black;
+}
+.text1
+{
+	color: white;
+}
+.su
+{
+	font-size: 30px;
+}
+/*-------------------------------END welcome-------------------------------*/
+
+/*-------------------------------For tablet-------------------------------*/
+@media only screen and (max-width: 1109px )
+{
+	.loginform
+	{
+		width: 40%;
+		margin: 0 5% 0 5%;
+	}
+}
+
+@media only screen and (max-width: 650px )
+{
+	.loginform
+	{
+		width: 80%;
+		margin-right: 10%;
+		margin-left: 10%;
+	}
+}
+
+@media only screen and (max-width: 965px )
+{
+	body
+	{
+		overflow-y: scroll; 
+	}
+	.welcome
+	{
+		position: relative;
+		width: 80%;
+		margin: 0 10% 0 10%;
+		top: 0px;
+		text-shadow: 4px 4px 2px black;
+		display: none;
+	}
+	.line
+	{
+		display: none;
+	}
+	.loginform
+	{
+		width: 70%;
+		margin-right: 15%;
+		margin-left: 15%;
+	}
+}
+/*
+@media only screen and (max-width: 510px )
+{
+	.welcome, .line
+	{
+		display: none; 
+	}
+	.loginform
+	{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;	
+	}
+} */

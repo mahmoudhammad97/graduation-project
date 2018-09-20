@@ -13,24 +13,40 @@ body
 {
 	overflow: hidden;
 }
+.img-background
+{
+	position: fixed;
+}
 .main
 {
 	text-align: center;
 	overflow: hidden;
 }
-.img-background
+.main1
 {
-	position: fixed;
+	width: 49.9%;
+	height: 100%;
+	float: left;
+	animation-duration: .5s;
+	animation-timing-function: ease-in-out;
 }
-/*-------------------------------start loginform-------------------------------*/
+@keyframes main1intop
+{
+	0%{top: 600px;}
+	100%{top: 0px;}
+}
+.main2
+{
+	width: 49.9%;
+	height: 100%;
+	float: right;
+}
+/*-------------------------------start main1-------------------------------*/
 .loginform
 {
-	width: 30%;
-	margin-right: 10%;
-	margin-left: 10%;
+	width: 80%;
+	margin: auto;
     position: relative;
-    top: 27.5%;
-    float: left;
     border: 1px dotted white;
     box-shadow: 2px 11px 34px black;
 }
@@ -82,7 +98,7 @@ input
     border: 0px;
     box-shadow: 1px 1px 3px black;
 }
-/*-------------------------------End loginform-------------------------------*/
+/*-------------------------------End main1-------------------------------*/
 .line
 {
 	width: 1px;
@@ -92,15 +108,16 @@ input
 	margin: auto;
 	top: 20%;
 	box-shadow: 2px 3px 4px black;
+	display: inline-block;
 }
-/*-------------------------------Start welcome-------------------------------*/
+/*-------------------------------Start main2-------------------------------*/
 .welcome
 {
-	float: right;
 	position: relative;
-	width: 30%;
-	margin: 0 10% 0 10%;
-	top: -27.5%;
+	width: 90%;
+	height: 40%;
+	top: 30%;
+	margin: 0 5% 0 5%;
 	text-shadow: 4px 4px 2px black;
 }
 .text1
@@ -111,65 +128,100 @@ input
 {
 	font-size: 30px;
 }
-/*-------------------------------END welcome-------------------------------*/
-
-/*-------------------------------For tablet-------------------------------*/
-@media only screen and (max-width: 1109px )
+.goto
 {
-	.loginform
-	{
-		width: 40%;
-		margin: 0 5% 0 5%;
-	}
+	order: 2;
+	display: none;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #ffffff1a;
+	position: absolute;
+	bottom: 5px;
 }
-
-@media only screen and (max-width: 650px )
+.goto1, .goto2, .goto3, .goto4
 {
-	.loginform
-	{
-		width: 80%;
-		margin-right: 10%;
-		margin-left: 10%;
-	}
+	width: 25px;
+	height: 3.5px;
+	background-color: #d1d1d1;
+	position: absolute;
 }
-
-@media only screen and (max-width: 965px )
+.goto1
 {
-	body
-	{
-		overflow-y: scroll; 
-	}
-	.welcome
-	{
-		position: relative;
-		width: 80%;
-		margin: 0 10% 0 10%;
-		top: 0px;
-		text-shadow: 4px 4px 2px black;
-		display: none;
-	}
+	transform: rotate(45deg);
+	top: 14px;
+	left: 13px;
+	transform-origin: left;
+	animation-name: firstanimation;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+.goto2
+{
+	transform: rotate(-45deg);
+	top: 14px;
+	right: 14px;
+	transform-origin: right;
+	animation-name: firstanimation;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+}
+.goto3
+{
+	transform: rotate(45deg);
+	top: 29.5px;
+	left: 13px;
+	transform-origin: left;
+	animation-name: firstanimation;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-delay: .5s;
+}
+.goto4
+{
+	transform: rotate(-45deg);
+	top: 28.5px;
+	right: 13px;
+	transform-origin: right;
+	animation-name: firstanimation;
+	animation-duration: 1.5s;
+	animation-iteration-count: infinite;
+	animation-delay: .5s;
+}
+@keyframes firstanimation
+{
+	0%{background-color: white;}
+	50%{background-color: #bababa;}
+	100%{background-color: white;}
+}
+/*-------------------------------END main2-------------------------------*/
+
+/*-------------------------------For tablet and mobile-------------------------------*/
+@media only screen and (max-width: 900px )
+{
 	.line
 	{
 		display: none;
 	}
-	.loginform
+	.main1
 	{
-		width: 70%;
-		margin-right: 15%;
-		margin-left: 15%;
+		display: none;
+		position: absolute;
+	}
+	.main2
+	{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	.welcome
+	{
+		order: 1;
+		display: block;
+	}
+	.goto
+	{
+		display: block;
 	}
 }
-/*
-@media only screen and (max-width: 510px )
-{
-	.welcome, .line
-	{
-		display: none; 
-	}
-	.loginform
-	{
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;	
-	}
-} */

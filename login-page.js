@@ -12,6 +12,19 @@ function setsize()
 	document.getElementById("loginform").style.top = toplogin +"px";
 	var centergoto = (width - 60)/2;
 	document.getElementById("goto").style.left  = centergoto +"px";
+	var topfailed = (height - 71)/2;
+}
+function failedtext1()
+{
+	document.getElementById("failedtext").innerHTML = "*please enter all required input*";
+	document.getElementById("failedtext").style.display = "block";
+	document.getElementById("password").style.marginBottom = 5 + "px";
+}
+function failedtext2()
+{
+	document.getElementById("failedtext").innerHTML = "*enter valid your mail and password*";
+	document.getElementById("failedtext").style.display = "block";
+	document.getElementById("password").style.marginBottom = 5 + "px";
 }
 function gotologin()
 {

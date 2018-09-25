@@ -21,6 +21,7 @@ body
 {
 	text-align: center;
 	overflow: hidden;
+	position: absolute;
 }
 .main1
 {
@@ -97,6 +98,10 @@ input
     color: white;
     border: 0px;
     box-shadow: 1px 1px 3px black;
+}
+.button-login:active
+{
+	background-color: #654758;
 }
 /*-------------------------------End main1-------------------------------*/
 .line
@@ -196,6 +201,20 @@ input
 }
 /*-------------------------------END main2-------------------------------*/
 
+/*-------------------------------failed login-------------------------------*/
+.failedtext
+{
+	position: relative;
+	color: white;
+	text-shadow: 1px 1px 0px black;
+	font-size: 18px;
+	display: none;
+	font-family: initial;
+	float: left;
+	left: 15%;
+	margin-bottom: 5px;
+}
+
 /*-------------------------------For tablet and mobile-------------------------------*/
 @media only screen and (max-width: 900px )
 {
@@ -223,5 +242,9 @@ input
 	.goto
 	{
 		display: block;
+	}
+	.failed
+	{
+		display: none;
 	}
 }
